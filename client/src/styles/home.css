@@ -1,0 +1,8 @@
+.box {
+    display: flex;
+    justify-content: center; /* Horizontal centering */
+    align-items: center; /* Vertical centering */
+    flex-direction: row; /* Stacking children vertically */
+    height: 100vh; /* Set the height of the container to 100% of the viewport height */
+    text-align: center; /* Center align the text inside the div */
+}

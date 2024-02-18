@@ -1,0 +1,327 @@
+.app-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  .left-side {
+    width: 40%; /* Adjust the width as needed */
+  }
+  
+  .right-side {
+    width: 60%; /* Adjust the width as needed */
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Adjust the gap as needed */
+  }
+  
+  .task-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Adjust the number of columns as needed */
+    gap: 20px; /* Adjust the gap as needed */
+  }
+  
+  .todo-container {
+    width: 100%; /* Adjust the width as needed */
+  }
+  
+  .task-list {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .task {
+    background-color: #eaeaea;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .completed {
+    background-color: #c3e6cb; /* Light green for completed tasks */
+  }
+  
+  h3 {
+    margin-bottom: 8px;
+  }
+  
+  .task-buttons {
+    display: flex;
+    margin-top: 10px;
+  }
+  
+  .delete-button,
+  .complete-button {
+    cursor: pointer;
+    background-color: #ee1d1d;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    margin-left: 5px;
+    border-radius: 5px;
+  }
+  
+  .complete-button {
+    background-color: #ef1d0a;
+  }
+  
+  .add-task {
+    margin-top: 20px;
+    max-width: 500px;
+    background-color: #0ca3e3a7; /* Attractive yellow color */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(53, 17, 17, 0.1);
+    padding: 20px;
+    text-align: center;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input,
+  textarea {
+    width: 80%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+  }
+  
+  button {
+    background-color: #f16c0d;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 10px auto;
+  }
+  
+  /* For Calender */
+  /* Add this to your styles or CSS file */
+  /* Calendar.css */
+  /* MonthSlider.css */
+  /* TrackerCalendar.css */
+  .calendar-box {
+    width: 400px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 20px auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+  }
+  
+  .calendar-header {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 10px;
+    padding: 5px;
+    background-color: #f0f0f0;
+  }
+  
+  .calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+  }
+  
+  .day-header {
+    text-align: center;
+    font-weight: bold;
+    padding: 10px;
+    background-color: #f5f5f5;
+  }
+  
+  .calendar-day {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #eee;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .calendar-day:hover {
+    background-color: #f5f5f5;
+  }
+  
+  .selected {
+    background-color: #4caf50;
+    color: #fff;
+  }
+  /* Your existing styles */
+  
+  /* Existing styles */
+  
+  .calendar-container {
+    position: relative;
+    width: 505px;/* Adjust /*as needed*/
+    margin:-5px auto;
+    top:50%;
+    transform: translateY(-50%);
+  }
+  
+  .navigation-button {
+    padding: 15px 15px;
+    font-size: 18px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .navigation-button:first-child {
+    left: 0;
+  }
+  
+  .navigation-button:last-child {
+    right: 0;
+  }
+  /* App.css */
+  /* App.css */
+  .app-container {
+    display: flex;
+    padding: 20px;
+  }
+  
+  .left-side {
+    width: 40%; /* Adjust the width as needed */
+  }
+  
+  .right-side {
+    width: 60%; /* Adjust the width as needed */
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Adjust the gap as needed */
+  }
+  
+  .task-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Adjust the number of columns as needed */
+    gap: 20px; /* Adjust the gap as needed */
+  }
+  
+  /* Add any additional styles as needed */
+  /* STOPWATCH CSS */
+  .timer-container h2{
+    color:#3498db
+  }
+  .timer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px; /* Add or adjust margin if needed */
+  }
+  
+  .timer-circle {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    background-color: #fff;
+    border: 6px solid #3498db;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .timer-circle p {
+    margin: 0;
+  }
+  
+  .display-4 {
+    margin-top: 20px;
+  }
+  
+  .input-container,
+  .button-container {
+    text-align: center;
+    margin-bottom: 10px; /* Add or adjust margin if needed */
+  }
+  
+  .input-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px; /* Add or adjust margin between input-container and timer-container for portrait mode */
+  }
+  
+  .input-container input {
+    width: 60px;
+    margin: 0 5px;
+  }
+  
+  /* Media query for desktop mode */
+  @media (min-width: 768px) {
+    .timer-circle {
+      width: 300px;
+      height: 300px;
+    }
+  
+    .input-container {
+      margin-bottom: 20px; /* Add or adjust margin between input-container and timer-container for desktop mode */
+    }
+  }
+  .milliseconds {
+    font-size: 0.8em;
+    margin-top: -10px; /* Adjust the font size for milliseconds */
+  }
+   */
+   .container {
+    height: 100vh;
+  }
+  
+  .timer-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px; /* Add or adjust margin if needed */
+  }
+  
+  .timer-circle {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    background-color: #fff;
+    border: 6px solid #3498db;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .input-container,
+  .button-container {
+    text-align: center;
+    margin-bottom: 10px; /* Add or adjust margin if needed */
+  }
+  
+  .input-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px; /* Add or adjust margin between input-container and timer-container for portrait mode */
+  }
+  
+  .input-container input {
+    width: 60px;
+    margin: 0 5px;
+  }
+  
+  /* Media query for desktop mode */
+  @media (min-width: 768px) {
+    .timer-circle {
+      width: 300px;
+      height: 300px;
+    }
+  
+    .input-container {
+      margin-bottom: 20px; /* Add or adjust margin between input-container and timer-container for desktop mode */
+    }
+  }
+  
+  .milliseconds {
+    font-size: 0.8em;
+    margin-top: -10px; /* Adjust the font size for milliseconds */
+  }
+  

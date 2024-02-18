@@ -1,0 +1,53 @@
+/* CardComponent.css */
+.card {
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    background-color: #3f51b5; /* primary color */
+    padding: 20px;
+    border-radius: 20px; /* rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    width: 18rem; /* 33.3333% width with margin */
+    height: 18rem;
+    float: left; /* align cards horizontally */
+    margin-right: 20px; /* space between cards */
+    margin-top: 20px; /* space between rows */
+    transition: transform 0.3s ease; /* animation */
+    margin: 3rem;
+  }
+  
+  .card:last-child {
+    margin-right: 0; /* remove margin from the last card in a row */
+  }
+  
+  .card:hover {
+    transform: scale(1.05); /* scale up on hover */
+  }
+  
+  .card h2 {
+    margin-top: 0;
+    color: #fff; /* white text color */
+  }
+  
+  .card p {
+    margin-bottom: 10px;
+    color: #fff; /* white text color */
+  }
+  
+  .card a {
+    color: #fff; /* white link color */
+    text-decoration: none;
+  }
+  
+  .card a:hover {
+    text-decoration: underline;
+  }
+  
+  @media (max-width: 768px) {
+    .card {
+      width: calc(50% - 30px); /* 50% width with margin for smaller screens */
+    }
+  }
+  
