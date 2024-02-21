@@ -1,19 +1,58 @@
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 
-const Calendar = () => {
-  const [selectedDates, setSelectedDates] = useState([]);
-  const [currentMonth, setCurrentMonth] = useState(new Date().getMonth());
-
+  const Calendar = (props) => {
+    //let calendarData = new Array(12);
+    let json;
+    const [selectedDates, setSelectedDates] = useState([]);
+    const [currentMonth, setCurrentMonth] = useState(new Date().getMonth());
+    const getDate = (dateString) => {
+    const dateObject = new Date(dateString);
+    const year = dateObject.getFullYear();
+    const month = (dateObject.getMonth() + 1).toString().padStart(2, '0'); // Adding 1 because months are zero-based
+    const day = dateObject.getDate().toString().padStart(2, '0');
+    return `${year}-${month}-${day}`;
+  }
   const handleCheckboxChange = (date) => {
+    console.log(date)
     if (selectedDates.includes(date)) {
       setSelectedDates(selectedDates.filter((d) => d !== date));
     } else {
       setSelectedDates([...selectedDates, date]);
     }
+    console.log(selectedDates)
   };
-
+  useEffect(() => {
+    const fetchTracker = async () => {
+        const response = await fetch("http://localhost:5000/" + props.route);
+        
+        json = await response.json();
+        let arr = [];
+        json.forEach(element => {
+           
+            element.months.forEach(month => {
+              console.log(month.month)
+              month.days.forEach(day => { 
+                let monthString = month.month < 10 ? `0${month.month}` : `${month.month}`;
+                let dayString = day < 10 ? `0${day}` : `${day}`;
+                let date = `2024-${monthString}-${dayString}`;
+                arr.push(date);
+                
+                console.log(date); 
+              })
+           //   calendarData[month.month-1] = month.days;
+            })
+            console.log(selectedDates)
+        });
+        setSelectedDates([...arr])
+    }
+    fetchTracker()
+  },[])
+  useEffect(() => {
+    let date = getDate(new Date);
+    if(props.isTicked)handleCheckboxChange(date);
+  },[props.isTicked])
   const handlePrevMonth = () => {
     setCurrentMonth((prevMonth) => (prevMonth === 0 ? 11 : prevMonth - 1));
   };

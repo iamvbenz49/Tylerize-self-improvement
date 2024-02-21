@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 
 
-const StopwatchApp = () => {
+const StopwatchApp = (props) => {
   const [hours, setHours] = useState(0);
   const [minutes, setMinutes] = useState(0);
   const [seconds, setSeconds] = useState(0);
@@ -38,7 +38,7 @@ const handleMinutesChange = (e) => {
     if (isActive) {
       interval = setInterval(() => {
         if (hours === 0 && minutes === 0 && seconds === 0) {
-          // Timer reaches zero
+          props.onTick();
           handleStop();
         } else {
           if (seconds === 0) {
@@ -55,7 +55,6 @@ const handleMinutesChange = (e) => {
         }
       }, 1000);
     }
-
     return () => clearInterval(interval);
   }, [isActive, seconds, minutes, hours]);
 
