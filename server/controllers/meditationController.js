@@ -23,9 +23,12 @@ const putTracker  = async (req,res) => {
   // const workout = await Workout.findOneAndUpdate({}, {
   //   ...req.body
   // })
-     
+  
 }
 
+const getWorkoutTracker = async (req,res) => {
+  
+}
 module.exports = {
   getTracker,
   putTracker
