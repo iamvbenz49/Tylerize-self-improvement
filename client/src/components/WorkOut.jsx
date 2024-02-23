@@ -30,7 +30,7 @@ const WorkoutPlanner = () => {
   return (
     <div className="workout-planner container-box">
       <h1>Workout Planner</h1>
-      <div className="input-container">
+      <div className="input-container1">
         <div className="inp">
           <p>Enter the Workout:</p>
           <input

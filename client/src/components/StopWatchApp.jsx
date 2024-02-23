@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import "../styles/mediatate.css";
+
 
 
 
@@ -38,7 +40,7 @@ const handleMinutesChange = (e) => {
     if (isActive) {
       interval = setInterval(() => {
         if (hours === 0 && minutes === 0 && seconds === 0) {
-          props.onTick();
+       //   props.onTick();
           handleStop();
         } else {
           if (seconds === 0) {
@@ -76,7 +78,7 @@ const handleMinutesChange = (e) => {
           Hours:
           <input
             type="number"
-            className="form-control mx-2"
+            className="form-control mx-6"
             value={hours}
             onChange={handleHoursChange}
           />

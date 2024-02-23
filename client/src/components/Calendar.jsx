@@ -23,32 +23,32 @@ import React, { useEffect, useState } from 'react';
     }
     console.log(selectedDates)
   };
-  useEffect(() => {
-    const fetchTracker = async () => {
-        const response = await fetch("http://localhost:5000/" + props.route);
+  // useEffect(() => {
+  //   const fetchTracker = async () => {
+  //       const response = await fetch("http://localhost:5000/" + props.route);
         
-        json = await response.json();
-        let arr = [];
-        json.forEach(element => {
+  //       json = await response.json();
+  //       let arr = [];
+  //       json.forEach(element => {
            
-            element.months.forEach(month => {
-              console.log(month.month)
-              month.days.forEach(day => { 
-                let monthString = month.month < 10 ? `0${month.month}` : `${month.month}`;
-                let dayString = day < 10 ? `0${day}` : `${day}`;
-                let date = `2024-${monthString}-${dayString}`;
-                arr.push(date);
+  //           element.months.forEach(month => {
+  //             console.log(month.month)
+  //             month.days.forEach(day => { 
+  //               let monthString = month.month < 10 ? `0${month.month}` : `${month.month}`;
+  //               let dayString = day < 10 ? `0${day}` : `${day}`;
+  //               let date = `2024-${monthString}-${dayString}`;
+  //               arr.push(date);
                 
-                console.log(date); 
-              })
-           //   calendarData[month.month-1] = month.days;
-            })
-            console.log(selectedDates)
-        });
-        setSelectedDates([...arr])
-    }
-    fetchTracker()
-  },[])
+  //               console.log(date); 
+  //             })
+  //          //   calendarData[month.month-1] = month.days;
+  //           })
+  //           console.log(selectedDates)
+  //       });
+  //       setSelectedDates([...arr])
+  //   }
+  //   fetchTracker()
+  // },[])
   useEffect(() => {
     let date = getDate(new Date);
     if(props.isTicked)handleCheckboxChange(date);

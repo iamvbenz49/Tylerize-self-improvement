@@ -209,25 +209,29 @@
     color:#3498db
   }
   .timer-container {
+    height:100vh;
     display: flex;
+    justify-content: center;
     flex-direction: column;
-    align-items: center;
-    margin-bottom: 20px; /* Add or adjust margin if needed */
+    align-items: center; /* Add or adjust margin if needed */
   }
   
   .timer-circle {
+    margin-bottom: 200px;/*margin change*/
     border-radius: 50%;
-    width: 200px;
-    height: 200px;
+    width: 220px;
+    height: 220px;
     background-color: #fff;
     border: 6px solid #3498db;
     display: flex;
     align-items: center;
     justify-content: center;
+  
   }
   
   .timer-circle p {
     margin: 0;
+    font-size: 40px;
   }
   
   .display-4 {
@@ -237,30 +241,40 @@
   .input-container,
   .button-container {
     text-align: center;
-    margin-bottom: 10px; /* Add or adjust margin if needed */
+    margin-bottom:70px; /* Add or adjust margin if needed */
   }
   
   .input-container {
+    margin-bottom: 20px;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    margin-bottom: 10px; /* Add or adjust margin between input-container and timer-container for portrait mode */
-  }
-  
-  .input-container input {
-    width: 60px;
+    border: 6px solid #ccc;
+    padding: 0px;
+    height: 200px;
+    width:250px;
+    margin-left:20px;
+    margin-top: -290px;
+}
+
+.input-container input {
+    width: 10px;
     margin: 0 5px;
-  }
-  
+}
+.button-container{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
   /* Media query for desktop mode */
   @media (min-width: 768px) {
-    .timer-circle {
-      width: 300px;
-      height: 300px;
-    }
+    
   
-    .input-container {
-      margin-bottom: 20px; /* Add or adjust margin between input-container and timer-container for desktop mode */
-    }
+    /* .input-container {
+      margin-bottom: 20px; Add or adjust margin between input-container and timer-container for desktop mode
+    } */
   }
   .milliseconds {
     font-size: 0.8em;
@@ -271,25 +285,7 @@
     height: 100vh;
   }
   
-  .timer-container {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px; /* Add or adjust margin if needed */
-  }
-  
-  .timer-circle {
-    border-radius: 50%;
-    width: 200px;
-    height: 200px;
-    background-color: #fff;
-    border: 6px solid #3498db;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+ 
   
   .input-container,
   .button-container {
@@ -310,11 +306,6 @@
   
   /* Media query for desktop mode */
   @media (min-width: 768px) {
-    .timer-circle {
-      width: 300px;
-      height: 300px;
-    }
-  
     .input-container {
       margin-bottom: 20px; /* Add or adjust margin between input-container and timer-container for desktop mode */
     }
